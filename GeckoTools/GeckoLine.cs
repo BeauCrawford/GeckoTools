@@ -3,9 +3,9 @@ using System.Drawing;
 
 namespace GeckoTools
 {
-	public class GeckoLineChart : GeckoWidget
+	public class GeckoLine : GeckoWidget
 	{
-		public GeckoLineChart()
+		public GeckoLine()
 		{
 			XAxisLabels = new List<string>();
 			YAxisLabels = new List<string>();
@@ -22,15 +22,25 @@ namespace GeckoTools
 		{
 			return new
 			{
-				item = Values.ToArray(),
-
-				settings = new
-				{
-					axisx = XAxisLabels.ToArray(),
-					axisy = YAxisLabels.ToArray(),
-					color = LineColor.ToHex()
-				}
+				x_axis = new { labels = XAxisLabels },
+				y_axis = new { labels = YAxisLabels },
+				series = new[] { new { data = Values.ToArray() } }
 			};
 		}
 	}
 }
+
+/*
+{
+  "x_axis": {
+	"labels": ["May", "Jun", "Jul", "Aug", "Sep"]
+  },
+  "series": [
+	{
+	  "data": [
+		10, 2, 24, 18, 35
+	  ]
+	}
+  ]
+}
+*/

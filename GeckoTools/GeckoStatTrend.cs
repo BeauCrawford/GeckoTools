@@ -6,12 +6,12 @@ namespace GeckoTools
 	{
 		public GeckoStatTrend()
 		{
-			PreviousValues = new List<int>();
+			PreviousValues = new List<decimal>();
 		}
 
-		public int CurrentValue { get; set; }
+		public decimal CurrentValue { get; set; }
 
-		public List<int> PreviousValues { get; private set; }
+		public List<decimal> PreviousValues { get; private set; }
 
 		public override object GetDataObject()
 		{

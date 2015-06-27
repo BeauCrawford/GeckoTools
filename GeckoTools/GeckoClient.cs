@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -22,13 +23,28 @@ namespace GeckoTools
 			{
 				requestStream.Write(byteArray, 0, byteArray.Length);
 
-				using (var response = request.GetResponse())
+				try
 				{
-					using (var responseStream = response.GetResponseStream())
+					using (var response = request.GetResponse())
 					{
-						using (var reader = new StreamReader(responseStream))
+						using (var responseStream = response.GetResponseStream())
 						{
-							return reader.ReadToEnd();
+							using (var reader = new StreamReader(responseStream))
+							{
+								return reader.ReadToEnd();
+							}
+						}
+					}
+				}
+				catch (WebException ex)
+				{
+					using (var response = ex.Response.GetResponseStream())
+					{
+						using (var reader = new StreamReader(response))
+						{
+							var error = reader.ReadToEnd();
+
+							throw new InvalidOperationException(error, ex);
 						}
 					}
 				}
@@ -74,7 +90,9 @@ namespace GeckoTools
 			}
 			else
 			{
-				Post(Url + key, GetJson(widget, Formatting.None));
+				var json = GetJson(widget, Formatting.Indented);
+
+				Post(Url + key, json);
 			}
 		}
 	}

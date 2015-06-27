@@ -46,7 +46,7 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="GeckoClient.cs" />
     <Compile Include="GeckoLeaderboard.cs" />
-    <Compile Include="GeckoLineChart.cs" />
+    <Compile Include="GeckoLine.cs" />
     <Compile Include="GeckoList.cs" />
     <Compile Include="GeckoMap.cs" />
     <Compile Include="GeckoMapCity.cs" />
