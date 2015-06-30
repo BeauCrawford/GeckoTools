@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoTools", "GeckoTools\Ge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoTools.Tests", "GeckoTools.Tests\GeckoTools.Tests.csproj", "{ABAF862B-BB2B-4B2B-91DD-F7FA1ED65237}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoTools.Examples", "GeckoTools.Examples\GeckoTools.Examples.csproj", "{43611A33-666D-4DC4-9711-EA4E5492ED12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{ABAF862B-BB2B-4B2B-91DD-F7FA1ED65237}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABAF862B-BB2B-4B2B-91DD-F7FA1ED65237}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABAF862B-BB2B-4B2B-91DD-F7FA1ED65237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43611A33-666D-4DC4-9711-EA4E5492ED12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43611A33-666D-4DC4-9711-EA4E5492ED12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43611A33-666D-4DC4-9711-EA4E5492ED12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43611A33-666D-4DC4-9711-EA4E5492ED12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,8 +6,8 @@
 		{
 		}
 
-		public int CurrentValue { get; set; }
-		public int PreviousValue { get; set; }
+		public decimal CurrentValue { get; set; }
+		public decimal PreviousValue { get; set; }
 
 		public override object GetDataObject()
 		{

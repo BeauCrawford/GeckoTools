@@ -31,7 +31,10 @@ namespace GeckoTools
 						{
 							using (var reader = new StreamReader(responseStream))
 							{
-								return reader.ReadToEnd();
+								var postResponse = reader.ReadToEnd();
+
+
+								return postResponse;
 							}
 						}
 					}

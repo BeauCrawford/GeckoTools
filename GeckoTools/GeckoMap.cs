@@ -12,7 +12,7 @@ namespace GeckoTools
 
 		public List<GeckoMapPoint> Points { get; private set; }
 
-		public GeckoMap AddCity(string city, string state, string country, int size = 2, string color = "d8f709")
+		public GeckoMap AddCity(string city, string state, string country, int size = 4, string color = "d8f709")
 		{
 			Guard.NotNullOrEmpty(city, "city");
 			Guard.NotNullOrEmpty(state, "state");
